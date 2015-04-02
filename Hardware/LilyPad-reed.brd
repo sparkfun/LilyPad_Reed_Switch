@@ -15,7 +15,7 @@
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
@@ -64,6 +64,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -97,6 +99,7 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="no" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="no"/>
@@ -144,15 +147,21 @@
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="no"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
 <plain>
-<wire x1="-3.8" y1="16.7" x2="3.8" y2="16.7" width="0.3048" layer="20" curve="-180"/>
-<wire x1="3.8" y1="-16.7" x2="-3.8" y2="-16.7" width="0.3048" layer="20" curve="-180"/>
-<wire x1="-3.8" y1="16.7" x2="-3.8" y2="-16.7" width="0.3048" layer="20"/>
-<wire x1="3.8" y1="16.7" x2="3.8" y2="-16.7" width="0.3048" layer="20"/>
+<wire x1="-3.8" y1="12.89" x2="3.8" y2="12.89" width="0.3048" layer="20" curve="-180"/>
+<wire x1="3.8" y1="-12.89" x2="-3.8" y2="-12.89" width="0.3048" layer="20" curve="-180"/>
+<wire x1="-3.8" y1="12.89" x2="-3.8" y2="-12.89" width="0.3048" layer="20"/>
+<wire x1="3.8" y1="12.89" x2="3.8" y2="-12.89" width="0.3048" layer="20"/>
 <text x="-60.96" y="0" size="1.778" layer="51" font="vector" ratio="15">Dia Campbell</text>
 <text x="1.905" y="-11.049" size="1.27" layer="16" font="vector" ratio="15" rot="MR90">V01</text>
+<text x="6.35" y="22.86" size="1.778" layer="52" font="vector" ratio="15">purple 0.08mm</text>
+<text x="-10.16" y="21.59" size="1.778" layer="51" font="vector" ratio="15">purple 0.8mm</text>
+<dimension x1="-3.8" y1="12.89" x2="3.81" y2="11.43" x3="0.005" y3="-21.59" textsize="1.778" textratio="15" layer="51" dtype="horizontal" unit="inch"/>
+<dimension x1="0" y1="16.637" x2="0.127" y2="-16.637" x3="11.43" y3="0" textsize="1.778" textratio="15" layer="51" dtype="vertical" unit="inch"/>
+<text x="-13.97" y="-26.67" size="1.778" layer="51" font="vector" ratio="15">Dimensions in inches</text>
 </plain>
 <libraries>
 <library name="LilyPad-Wearables">
@@ -277,12 +286,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
 <package name="CREATIVE_COMMONS">
-<text x="-20.32" y="5.08" size="1.778" layer="51">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="51"> https://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="11.43" y="0" size="1.778" layer="51">Designed by:</text>
+<text x="-20.32" y="5.08" size="1.778" layer="51" font="vector">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
+<text x="0" y="2.54" size="1.778" layer="51" font="vector"> https://creativecommons.org/licenses/by-sa/4.0/</text>
+<text x="11.43" y="0" size="1.778" layer="51" font="vector">Designed by:</text>
 </package>
-<package name="OSHW-LOGO-S">
-<polygon width="0.15" layer="21">
+<package name="OSHW-LOGO-S_COPPER">
+<polygon width="0.15" layer="1">
 <vertex x="0.3947" y="-0.9528" curve="9.498218"/>
 <vertex x="0.5465" y="-0.8746"/>
 <vertex x="0.9235" y="-1.182"/>
@@ -318,30 +327,135 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.1794" y="-0.4331"/>
 </polygon>
 </package>
-</packages>
-</library>
-<library name="SparkFun-Connectors">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find connectors and sockets- basically anything that can be plugged into or onto.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="1X01">
-<wire x1="1.27" y1="0.635" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="-0.635" y2="1.27" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
-<text x="1.1938" y="1.8288" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<package name="SFE_LOGO_FLAME_COPPER_.1">
+<polygon width="0.01" layer="1">
+<vertex x="1.7" y="2.48"/>
+<vertex x="1.7" y="2.46"/>
+<vertex x="1.7" y="2.43"/>
+<vertex x="1.7" y="2.4"/>
+<vertex x="1.69" y="2.37"/>
+<vertex x="1.68" y="2.35"/>
+<vertex x="1.65" y="2.32"/>
+<vertex x="1.62" y="2.31"/>
+<vertex x="1.59" y="2.31"/>
+<vertex x="1.55" y="2.32"/>
+<vertex x="1.51" y="2.33"/>
+<vertex x="1.47" y="2.35"/>
+<vertex x="1.44" y="2.37"/>
+<vertex x="1.4" y="2.4"/>
+<vertex x="1.37" y="2.43"/>
+<vertex x="1.34" y="2.46"/>
+<vertex x="1.32" y="2.49"/>
+<vertex x="1.3" y="2.52"/>
+<vertex x="1.29" y="2.56"/>
+<vertex x="1.29" y="2.59"/>
+<vertex x="1.29" y="2.62"/>
+<vertex x="1.3" y="2.65"/>
+<vertex x="1.31" y="2.67"/>
+<vertex x="1.33" y="2.7"/>
+<vertex x="1.37" y="2.73"/>
+<vertex x="1.41" y="2.75"/>
+<vertex x="1.46" y="2.76"/>
+<vertex x="1.5" y="2.77"/>
+<vertex x="1.53" y="2.77"/>
+<vertex x="1.56" y="2.77"/>
+<vertex x="1.58" y="2.76"/>
+<vertex x="1.59" y="2.76"/>
+<vertex x="1.58" y="2.77"/>
+<vertex x="1.54" y="2.8"/>
+<vertex x="1.48" y="2.83"/>
+<vertex x="1.4" y="2.87"/>
+<vertex x="1.31" y="2.89"/>
+<vertex x="1.21" y="2.89"/>
+<vertex x="1.1" y="2.87"/>
+<vertex x="0.99" y="2.81"/>
+<vertex x="0.9" y="2.74"/>
+<vertex x="0.85" y="2.66"/>
+<vertex x="0.82" y="2.57"/>
+<vertex x="0.82" y="2.49"/>
+<vertex x="0.84" y="2.4"/>
+<vertex x="0.89" y="2.31"/>
+<vertex x="0.96" y="2.23"/>
+<vertex x="1.04" y="2.14"/>
+<vertex x="1.11" y="2.07"/>
+<vertex x="1.14" y="1.99"/>
+<vertex x="1.14" y="1.92"/>
+<vertex x="1.12" y="1.86"/>
+<vertex x="1.08" y="1.81"/>
+<vertex x="1.02" y="1.77"/>
+<vertex x="0.94" y="1.75"/>
+<vertex x="0.86" y="1.75"/>
+<vertex x="0.81" y="1.76"/>
+<vertex x="0.76" y="1.78"/>
+<vertex x="0.73" y="1.81"/>
+<vertex x="0.7" y="1.84"/>
+<vertex x="0.68" y="1.87"/>
+<vertex x="0.67" y="1.9"/>
+<vertex x="0.67" y="1.94"/>
+<vertex x="0.68" y="1.97"/>
+<vertex x="0.7" y="1.99"/>
+<vertex x="0.72" y="2.01"/>
+<vertex x="0.74" y="2.03"/>
+<vertex x="0.77" y="2.04"/>
+<vertex x="0.79" y="2.05"/>
+<vertex x="0.81" y="2.06"/>
+<vertex x="0.82" y="2.07"/>
+<vertex x="0.8" y="2.08"/>
+<vertex x="0.78" y="2.09"/>
+<vertex x="0.74" y="2.09"/>
+<vertex x="0.7" y="2.09"/>
+<vertex x="0.66" y="2.09"/>
+<vertex x="0.6" y="2.08"/>
+<vertex x="0.55" y="2.07"/>
+<vertex x="0.5" y="2.05"/>
+<vertex x="0.46" y="2.02"/>
+<vertex x="0.41" y="1.98"/>
+<vertex x="0.38" y="1.93"/>
+<vertex x="0.35" y="1.88"/>
+<vertex x="0.33" y="1.81"/>
+<vertex x="0.32" y="1.73"/>
+<vertex x="0.32" y="1.63"/>
+<vertex x="0.32" y="1.47"/>
+<vertex x="0.32" y="1.31"/>
+<vertex x="0.32" y="1.15"/>
+<vertex x="0.32" y="0.99"/>
+<vertex x="0.32" y="0.83"/>
+<vertex x="0.32" y="0.67"/>
+<vertex x="0.32" y="0.51"/>
+<vertex x="0.32" y="0.35"/>
+<vertex x="0.32" y="0.36"/>
+<vertex x="0.34" y="0.38"/>
+<vertex x="0.37" y="0.41"/>
+<vertex x="0.4" y="0.46"/>
+<vertex x="0.45" y="0.51"/>
+<vertex x="0.5" y="0.57"/>
+<vertex x="0.56" y="0.63"/>
+<vertex x="0.62" y="0.69"/>
+<vertex x="0.68" y="0.76"/>
+<vertex x="0.74" y="0.83"/>
+<vertex x="0.79" y="0.88"/>
+<vertex x="0.84" y="0.93"/>
+<vertex x="0.89" y="0.96"/>
+<vertex x="0.94" y="0.99"/>
+<vertex x="1" y="1"/>
+<vertex x="1.07" y="1"/>
+<vertex x="1.19" y="1"/>
+<vertex x="1.31" y="1.02"/>
+<vertex x="1.42" y="1.05"/>
+<vertex x="1.52" y="1.09"/>
+<vertex x="1.62" y="1.15"/>
+<vertex x="1.7" y="1.22"/>
+<vertex x="1.78" y="1.3"/>
+<vertex x="1.85" y="1.39"/>
+<vertex x="1.95" y="1.57"/>
+<vertex x="2" y="1.76"/>
+<vertex x="2.01" y="1.93"/>
+<vertex x="1.98" y="2.09"/>
+<vertex x="1.93" y="2.24"/>
+<vertex x="1.86" y="2.35"/>
+<vertex x="1.78" y="2.44"/>
+<vertex x="1.7" y="2.49"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -354,7 +468,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun">
+<designrules name="SparkFun-2-layer">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
@@ -376,11 +490,11 @@ design rules under a new name.</description>
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="10mil"/>
+<param name="mdCopperDimension" value="8mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
-<param name="msDrill" value="20mil"/>
+<param name="msWidth" value="7mil"/>
+<param name="msDrill" value="15mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -415,7 +529,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="25mil"/>
+<param name="mlViaStopLimit" value="20mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -424,7 +538,7 @@ design rules under a new name.</description>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
 <param name="checkGrid" value="0"/>
-<param name="checkAngle" value="0"/>
+<param name="checkAngle" value="1"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="useDiameter" value="13"/>
@@ -527,55 +641,66 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="SLIDEOFF" library="LilyPad-Wearables" package="PETAL-MEDIUM-2SIDE" value="SEWTAP8" x="0" y="-16.637"/>
-<element name="SLIDEON" library="LilyPad-Wearables" package="PETAL-MEDIUM-2SIDE" value="SEWTAP8" x="0" y="16.637" rot="R180"/>
+<element name="SLIDEOFF" library="LilyPad-Wearables" package="PETAL-MEDIUM-2SIDE" value="SEWTAP8" x="0" y="-12.827"/>
+<element name="SLIDEON" library="LilyPad-Wearables" package="PETAL-MEDIUM-2SIDE" value="SEWTAP8" x="0" y="12.827" rot="R180"/>
 <element name="REED" library="SparkFun-Electromechanical" package="REED_SWITCH_PLASTIC" value="SWITCH-MOMENTARY-2PTH_REED2" x="0" y="0" rot="R270"/>
-<element name="U$1" library="LilyPad-Wearables" package="LOGO-LILYPAD" value="LOGO-LPLP" x="0.127" y="-1.778" rot="MR90"/>
+<element name="U$1" library="LilyPad-Wearables" package="LOGO-LILYPAD" value="LOGO-LPLP" x="0.127" y="-0.127" rot="MR90"/>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="" x="-91.73185625" y="0">
 <attribute name="VERSION" value="v01" x="-91.73185625" y="0" size="1.778" layer="27" display="off"/>
 <attribute name="DESIGNER" value="NAME" x="-91.73185625" y="0" size="1.778" layer="27" display="off"/>
 </element>
-<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="0" y="5.461" rot="MR90"/>
-<element name="JP1" library="SparkFun-Connectors" package="1X01" value="" x="0" y="-12.7"/>
-<element name="JP2" library="SparkFun-Connectors" package="1X01" value="" x="0" y="12.7"/>
+<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-S_COPPER" value="OSHW-LOGOS-COPPER" x="-2.159" y="10.287" rot="MR90"/>
+<element name="LOGO2" library="SparkFun-Aesthetics" package="SFE_LOGO_FLAME_COPPER_.1" value="SFE_LOGO_FLAME.1COP" x="-3.683" y="-11.43" rot="MR90"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="SLIDEOFF" pad="1"/>
 <contactref element="REED" pad="P$2"/>
-<contactref element="JP1" pad="1"/>
-<wire x1="0" y1="-16.891" x2="0" y2="-12.7" width="0.254" layer="1"/>
-<wire x1="0" y1="-8.89" x2="0" y2="-12.7" width="0.254" layer="1"/>
+<wire x1="0" y1="-13.081" x2="0" y2="-8.89" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="REED" pad="P$1"/>
 <contactref element="SLIDEON" pad="1"/>
-<contactref element="JP2" pad="1"/>
-<wire x1="0" y1="16.891" x2="0" y2="12.7" width="0.254" layer="1"/>
-<wire x1="0" y1="8.89" x2="0" y2="12.7" width="0.254" layer="1"/>
+<wire x1="0" y1="13.081" x2="0" y2="8.89" width="0.4064" layer="1"/>
 </signal>
 </signals>
 <errors>
+<approved hash="5,1,21e71c063a12073d"/>
+<approved hash="5,1,df7bff75c0fc9969"/>
+<approved hash="5,1,bed9ff61a15c999b"/>
+<approved hash="5,1,f64ce127d8868b00"/>
+<approved hash="5,1,bfdcfc7aa25be666"/>
+<approved hash="5,1,dc7cfc6ec1f9e694"/>
+<approved hash="5,16,21e71c063a12073d"/>
+<approved hash="5,16,df7bff75c0fc9969"/>
+<approved hash="5,16,bed9ff61a15c999b"/>
+<approved hash="5,16,f64ce127d8868b00"/>
+<approved hash="5,16,bfdcfc7aa25be666"/>
+<approved hash="5,16,dc7cfc6ec1f9e694"/>
 <approved hash="3,1,55eef64e4b76ca77"/>
 <approved hash="3,16,d7249965121d0002"/>
 <approved hash="3,1,1eda85427f46c27b"/>
 <approved hash="3,16,9c10ea6922290c0a"/>
-<approved hash="5,1,21e71c063a12073d"/>
-<approved hash="5,1,df7bff75c0fc9969"/>
-<approved hash="5,1,bed9ff61a15c999b"/>
+<approved hash="3,16,a379831b89f1d62c"/>
+<approved hash="3,16,a684d97ad974a68a"/>
+<approved hash="5,1,1ed3bc49a2e71da1"/>
+<approved hash="5,1,a3460543873a6f90"/>
+<approved hash="5,1,8a2e06c4fb343982"/>
 <approved hash="5,1,b0e06b1dc263199f"/>
-<approved hash="5,1,f64ce127d8868b00"/>
-<approved hash="5,1,bfdcfc7aa25be666"/>
-<approved hash="5,1,dc7cfc6ec1f9e694"/>
+<approved hash="5,1,84ae463457298862"/>
+<approved hash="5,1,8a2e3bc1c4314871"/>
+<approved hash="5,1,ad4a3a46ba3f106f"/>
 <approved hash="5,1,a2fe7d07d37c0c84"/>
-<approved hash="5,16,21e71c063a12073d"/>
-<approved hash="5,16,df7bff75c0fc9969"/>
-<approved hash="5,16,bed9ff61a15c999b"/>
+<approved hash="5,16,1ed3bc49a2e71da1"/>
+<approved hash="5,16,a3460543873a6f90"/>
+<approved hash="5,16,8a2e06c4fb343982"/>
 <approved hash="5,16,b0e06b1dc263199f"/>
-<approved hash="5,16,f64ce127d8868b00"/>
-<approved hash="5,16,bfdcfc7aa25be666"/>
-<approved hash="5,16,dc7cfc6ec1f9e694"/>
+<approved hash="5,16,84ae463457298862"/>
+<approved hash="5,16,8a2e3bc1c4314871"/>
+<approved hash="5,16,ad4a3a46ba3f106f"/>
 <approved hash="5,16,a2fe7d07d37c0c84"/>
+<approved hash="5,16,ea3381ac6d353051"/>
+<approved hash="5,16,677cae9d486a88fb"/>
 </errors>
 </board>
 </drawing>
