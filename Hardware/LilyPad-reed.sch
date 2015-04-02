@@ -2013,7 +2013,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="SWCH-10467" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SIDE_EZ" package="TACTILE-PTH-SIDEEZ">
@@ -9285,8 +9287,12 @@ for the logo on the board is tSilk.</description>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
-<instance part="SLIDEOFF" gate="G$1" x="109.22" y="96.52" rot="R180"/>
-<instance part="SLIDEON" gate="G$1" x="144.78" y="96.52"/>
+<instance part="SLIDEOFF" gate="G$1" x="109.22" y="96.52" smashed="yes" rot="R180">
+<attribute name="VALUE" x="111.76" y="101.6" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="SLIDEON" gate="G$1" x="144.78" y="96.52" smashed="yes">
+<attribute name="VALUE" x="142.24" y="91.44" size="1.778" layer="96"/>
+</instance>
 <instance part="REED" gate="G$1" x="127" y="96.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="129.54" y="93.98" size="1.778" layer="95" rot="R180"/>
 </instance>
