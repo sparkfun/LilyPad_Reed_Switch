@@ -9176,7 +9176,7 @@ for the logo on the board is tSilk.</description>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="SLIDEOFF" library="LilyPad-Wearables" deviceset="SEWTAP" device="8"/>
 <part name="SLIDEON" library="LilyPad-Wearables" deviceset="SEWTAP" device="8"/>
-<part name="REED" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH_REED2"/>
+<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH_REED2" value="REED"/>
 <part name="U$1" library="LilyPad-Wearables" deviceset="LOGO-LP" device="LP"/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S-COPPER"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".1COP" value="SFE_LOGO_FLAME.1COP"/>
@@ -9186,6 +9186,7 @@ for the logo on the board is tSilk.</description>
 <plain>
 <text x="177.8" y="7.62" size="3.81" layer="94">Dia Campbell</text>
 <text x="239.522" y="6.858" size="3.81" layer="94">01</text>
+<text x="203.2" y="180.34" size="1.778" layer="97">Max switched current .25A</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -9196,7 +9197,7 @@ for the logo on the board is tSilk.</description>
 <instance part="SLIDEON" gate="G$1" x="144.78" y="96.52" smashed="yes">
 <attribute name="VALUE" x="142.24" y="91.44" size="1.778" layer="96"/>
 </instance>
-<instance part="REED" gate="G$1" x="127" y="96.52" smashed="yes" rot="R180">
+<instance part="S1" gate="G$1" x="127" y="96.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="129.54" y="93.98" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="U$1" gate="G$1" x="233.68" y="27.94"/>
@@ -9209,13 +9210,13 @@ for the logo on the board is tSilk.</description>
 <net name="N$1" class="0">
 <segment>
 <pinref part="SLIDEOFF" gate="G$1" pin="1"/>
-<pinref part="REED" gate="G$1" pin="2"/>
+<pinref part="S1" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="96.52" x2="121.92" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="REED" gate="G$1" pin="1"/>
+<pinref part="S1" gate="G$1" pin="1"/>
 <pinref part="SLIDEON" gate="G$1" pin="1"/>
 <wire x1="132.08" y1="96.52" x2="142.24" y2="96.52" width="0.1524" layer="91"/>
 </segment>
