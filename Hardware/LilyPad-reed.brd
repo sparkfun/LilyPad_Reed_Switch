@@ -156,7 +156,7 @@
 <wire x1="-3.8" y1="12.89" x2="-3.8" y2="-12.89" width="0.2032" layer="20"/>
 <wire x1="3.8" y1="12.89" x2="3.8" y2="-12.89" width="0.2032" layer="20"/>
 <text x="7.62" y="-38.1" size="1.778" layer="51" font="vector" ratio="15">Dia Campbell</text>
-<text x="1.905" y="-11.049" size="1.27" layer="16" font="vector" ratio="15" rot="MR90">V01</text>
+<text x="1.905" y="-11.049" size="1.27" layer="16" font="vector" ratio="15" rot="MR90">V10</text>
 <text x="6.35" y="22.86" size="1.778" layer="52" font="vector" ratio="15">purple 0.08mm</text>
 <text x="-10.16" y="21.59" size="1.778" layer="51" font="vector" ratio="15">purple 0.8mm</text>
 <dimension x1="-3.8" y1="12.89" x2="3.81" y2="11.43" x3="0.005" y3="-21.59" textsize="1.778" textratio="15" layer="47" dtype="horizontal" unit="inch"/>

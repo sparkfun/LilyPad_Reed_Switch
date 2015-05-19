@@ -9185,7 +9185,7 @@ for the logo on the board is tSilk.</description>
 <sheet>
 <plain>
 <text x="177.8" y="7.62" size="3.81" layer="94">Dia Campbell</text>
-<text x="239.522" y="6.858" size="3.81" layer="94">01</text>
+<text x="239.522" y="6.858" size="3.81" layer="94">10</text>
 <text x="203.2" y="180.34" size="1.778" layer="97">Max switched current .25A</text>
 </plain>
 <instances>
